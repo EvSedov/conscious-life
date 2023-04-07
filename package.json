@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git+https://github.comevsedov/conscious-life.git"
+    "url": "git+git+https://github.com/evsedov/conscious-life.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "git+https://github.comevsedov/conscious-life/issues"
+    "url": "git+https://github.com/evsedov/conscious-life/issues"
   },
-  "homepage": "git+https://github.comevsedov/conscious-life.git#readme",
+  "homepage": "git+https://github.com/evsedov/conscious-life.git#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
