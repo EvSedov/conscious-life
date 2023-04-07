@@ -9,11 +9,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const mixins = globule
-    .find(["src/blocks/libs/**/_*.pug", "!src/blocks/libs/_libs.pug"])
+    .find(["src/pug/mixins/**/*.pug"], ["!src/pug/mixins/_mixins.pug"])
     .map((path) => path.split('/').pop())
     .reduce((acc, currentItem) => acc + `include ${currentItem}\n`, ``);
 
-fs.writeFile("src/blocks/libs/_libs.pug", mixins, (err) => {
+fs.writeFile("src/pug/mixins/_mixins.pug", mixins, (err) => {
     if (err) throw err;
     console.log("Mixins are generated automatically!");
 });
