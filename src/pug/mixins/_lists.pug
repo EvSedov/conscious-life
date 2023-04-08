@@ -1,6 +1,20 @@
-mixin list-group-flush-numbered(lines, text = '')
-    ul.list-group.list-group-flush.list-group-numbered
+mixin list-group-flush-numbered(lines = [], paragraths = [])
+    ul.list-group.list-group-flush.list-group-numbered.mb-2
         each line in lines
-            li.list-group-item= line[1] 
-        if text !== ''
-                p.mt-3= text
+            - 
+                var boldLine = line[0]
+                var midleLine = line[1]
+            li.list-group-item 
+                span.fw-bold !{boldLine}
+                |
+                | !{midleLine}
+    if paragraths.length
+        each text in paragraths
+            -
+                var boldText = text[0]
+                var midleText = text[1]
+            p.text-justify.lh-sm
+                span.fw-bold !{boldText}
+                |
+                | !{midleText}
+

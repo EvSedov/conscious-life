@@ -1,6 +1,7 @@
-mixin section()
+mixin section(title = '')
     section.section 
         .container-fluid
             .row
+                h2= title
                 if block
                     block
