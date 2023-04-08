@@ -5,5 +5,5 @@ mixin footer(...footItems)
         else
             .row
                 - for (var x = 0; x < footItems.length; x++)
-                    .col-4
+                    .col-5
                         +nav('', 'nav dark flex-column p-3', footItems[x])

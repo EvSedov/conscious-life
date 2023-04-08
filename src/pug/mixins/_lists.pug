@@ -1,0 +1,6 @@
+mixin list-group-flush-numbered(lines, text = '')
+    ul.list-group.list-group-flush.list-group-numbered
+        each line in lines
+            li.list-group-item= line[1] 
+        if text !== ''
+                p.mt-3= text

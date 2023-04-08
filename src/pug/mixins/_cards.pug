@@ -5,16 +5,19 @@ mixin card(title = '', text = '')
                 h5.card-title= title
                 p.card-text= text
 
-mixin card-title(title, subtitle, paragraphs, className='border-light text-dark bg-light')
+mixin card-title(title = '', subtitle = '', paragraphs = [], className='border-light text-dark bg-light')
     div(class= `card ${className}`)
         .card-body
             h2.card-title.mb-4= title
             h3.card-subtitle.mb-3= subtitle
-            each val in paragraphs
-                -
-                    var boldText = val[0]
-                    var text = val[1]
-                p.card-text
-                    span.fw-bold !{boldText}
-                    |
-                    | !{text}
+            if block
+                block
+            else
+                each val in paragraphs
+                    -
+                        var boldText = val[0]
+                        var text = val[1]
+                    p.card-text
+                        span.fw-bold !{boldText}
+                        |
+                        | !{text}
