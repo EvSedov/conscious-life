@@ -9,9 +9,9 @@ mixin card-title(title = '', subtitle = '', paragraphs = [], className='no-borde
     div(class= `card ${className}`)
         .card-body
             if title !== ''
-                h3.card-title.mb-4= title
+                h4.card-title.mb-4= title
             if subtitle !== ''
-                h4.card-subtitle.text-muted.mb-3= subtitle
+                h5.card-subtitle.text-muted.mb-3= subtitle
             each val in paragraphs
                 -
                     var boldText = val[0]
