@@ -1,9 +1,7 @@
-mixin header(page='Home')
+mixin header(text = '')
     header.mb-4
         if block
             block
         else
-            +navbar
-                +navbar-brand('GrandpaJS')
-                +nav(page, 'navbar-nav flex-row')
-                +btn('Sign in', 'dark')
+            a.navbar-brand(href=`${href}` class=`${classes}`)
+                h1= text
