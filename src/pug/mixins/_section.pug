@@ -1,5 +1,5 @@
-mixin section(title = '')
-    section.section.pb-4
+mixin section(title = '', idTitle='')
+    section.section.pb-4(id = idTitle)
         .container-fluid
             .row
                 h3= title
