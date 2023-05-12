@@ -1,5 +1,5 @@
-mixin link(text='Link', href='#', cls)
-    a(href=`${href}` class=cls)= text
+mixin link(text='', cls, name='')
+    a(href=require(`../../assets/docs/${name}`) class= cls)= text
 
-mixin link_download(text='Link', cls, name='')
-    a(href=require(`../../assets/docs/${name}`) download="Program.pdf" class=cls)= text
+mixin link_download(text='', cls, name='')
+    a(href=require(`../../assets/docs/${name}`) download="Program.pdf" class= cls)= text
